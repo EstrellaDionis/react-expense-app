@@ -1,13 +1,20 @@
 import './ExpenseItem.css'
 
 function ExpenseItem(props){
-    // const expenseDate = new Date(2022, 6, 16)
-    // const expenseTitle = 'Car Insurance'
-    // const expenseAmount = 294.67
+    
+    //create these variables instead of coding them into the divs to make them reusable
+    const month = props.date.toLocaleString('en-US', { month: 'long'})
+    const day = props.date.toLocaleString('en-US', {day: '2-digit'})
+    const year = props.date.getFullYear()
+
 
     return (
         <div className='expense-item'>
-        <h2>{props.date.toISOString()}</h2>
+            <div>
+            <div>{month}</div>
+            <div>{day}</div>
+            <div>{year}</div>
+            </div>
         <div className='expense-item__description'>
             <h2>{props.title}</h2>
             <div className='expense-item__price'>${props.amount}</div>
