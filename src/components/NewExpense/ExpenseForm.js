@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import './ExpenseForm.css'
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
     const [titleChange, setTitleChange] = useState('')
     const [dateChange, setDateChange] = useState('')
     const [amountChange, setAmountChange] = useState('')
@@ -55,7 +55,7 @@ const ExpenseForm = () => {
         date: new Date(dateChange),
         amount: amountChange
         }
-        console.log(expenseData)
+        props.onSaveExpenseData(expenseData) //note the props.
         //resets input values after submition
         setTitleChange('') 
         setAmountChange('')
