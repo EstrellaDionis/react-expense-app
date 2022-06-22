@@ -14,11 +14,18 @@ const Expenses = (props) => {
     console.log(selectedYear)
   }
 
+  //Conditionally filtering to only show items that are in the year selected. 
+  //getFullYear() is a js method
+  const filteredExpenses = props.items.filter(expense => {
+    return expense.date.getFullYear().toString() === filteredYear;
+  })
+
   return (
     <Card className="expenses">
       <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler}/>
       {
-        props.items.map(ex => {
+        //was previously props.items.map but now, we are mapping through every filtered year
+        filteredExpenses.map(ex => {
             return <ExpenseItem key={ex.id} title={ex.title} amount={ex.amount} date={ex.date} />
         })
       }
