@@ -53,7 +53,7 @@ const ExpenseForm = (props) => {
         const expenseData = {
         title: titleChange,
         date: new Date(dateChange),
-        amount: amountChange
+        amount: +amountChange
         }
         props.onSaveExpenseData(expenseData) //note the props. This is being passed from NewExpense.js
         //resets input values after submition
