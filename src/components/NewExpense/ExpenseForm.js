@@ -14,6 +14,7 @@ const ExpenseForm = (props) => {
     // })
 
     const titleChangeHandler = (event) => {
+        //if you console.log(event), you get to see all the properties attached to event. We want the target property but not just that, attached to target is also value and we want that as well
         setTitleChange(event.target.value) 
 
         //a little better
