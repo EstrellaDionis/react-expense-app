@@ -7,43 +7,18 @@ const ExpenseForm = (props) => {
     const [dateChange, setDateChange] = useState('')
     const [amountChange, setAmountChange] = useState('')
 
-    // const [userInput, setUserInput] = useState({
-    //     titleChange: '',
-    //     dateChange: '',
-    //     amountChange: '',
-    // })
-
     const titleChangeHandler = (event) => {
         //if you console.log(event), you get to see all the properties attached to event. We want the target property but not just that, attached to target is also value and we want that as well
+        //This also shows you the current state vs the 
         setTitleChange(event.target.value) 
-
-        //a little better
-        // setUserInput({
-        //     ...userInput, //we spread here because we don't want to lose the other key value pairs in the slice of state
-        //     titleChange: event.taget.value
-
-        //best way to do this when you're depending on a previous state
-        // setUserInput((prevState) => {
-        //     return { ...prevState, titleChange: event.target.value }
-        // })
-
-        
     };
 
     const dateChangeHandler = (event) => {
         setDateChange(event.target.value)
-        // setUserInput({
-        //     ...userInput,
-        //     dateChange: event.taget.value
-        // })
     }
 
     const amountChangeHandler = (event) => {
         setAmountChange(event.target.value)
-        // setUserInput({
-        //     ...userInput,
-        //     amountChange: event.taget.value
-        // })
     }
 
     
