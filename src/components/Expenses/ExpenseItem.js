@@ -5,6 +5,9 @@ import './ExpenseDate'
 import Card from '../UI/Card'
 import ExpenseDate from './ExpenseDate'
 
+// You grab props by typing props.nameThatFollows 
+//props. is setting up the next piece to be recognized as a prop which you will grab
+
 const ExpenseItem = (props) => {
     return (
         <li>
