@@ -26,6 +26,7 @@ const NewExpense = (props) => {
 
     //1st render: if not editing , display button
     //2nd render: if button is editing, display the form
+    //full explanation on video 68 1/2 (assignment 4)
     return <div className='new-expense'>
         {!isEditing && <button onClick={startEditingHandler}>Add New Expense</button>}
         {isEditing && <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} onCancel={stopEditingHandler}/>}
