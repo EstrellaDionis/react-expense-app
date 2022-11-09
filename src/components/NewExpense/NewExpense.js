@@ -11,7 +11,7 @@ const NewExpense = (props) => {
             ...enteredExpenseData,
             id: Math.random().toString()
         }
-        props.onAddExpense(expenseData) //adds expense
+        props.onAddExpense(expenseData) //adds expense. This prop was passed down because we want to be able to pass UP information to the parent
         setIsEditing(false) //closes form when done
     }
 

@@ -31,9 +31,9 @@ const ExpenseForm = (props) => {
         date: new Date(dateChange),
         amount: +amountChange
         }
-        props.onSaveExpenseData(expenseData) //note the props. This is being passed from NewExpense.js
+        props.onSaveExpenseData(expenseData) //note the props. This is being passed from NewExpense.js. This prop was passed down because we want to be able to pass UP information to the parent
         //resets input values after submition
-        setTitleChange('') 
+        setTitleChange('') //Clearing the submissions so they're empty after submitting 
         setAmountChange('')
         setDateChange('')
     }
