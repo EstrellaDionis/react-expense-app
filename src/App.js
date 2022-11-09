@@ -30,7 +30,7 @@ function App() {
 
   //taking the expense which is passed down to child component and then passed back up, adding the expense to the array and then copying the previous expenses/state to it
   const addExpenseHandler = expense => { 
-    setExpenses(prevExpenses => {
+    setExpenses(prevExpenses => { //prevExpenses allows us to grab the current state. It is an updating state function and AUTOMATICALLY receives the LATEST state snapshot
       return [expense, ...prevExpenses]
     })
   }
